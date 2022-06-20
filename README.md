@@ -1,2 +1,2 @@
-# infrastructure-and-configuration-management
+# Infrastructure and Configuration Management
 DevOps - Infrastructure &amp; Configuration Management.
