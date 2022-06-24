@@ -1,0 +1,16 @@
+- hosts: dbservers
+  become: true
+
+  tasks:
+    - name: Update and upgrade apt packages
+      become: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Install MariaDB Server
+      apt: name=mariadb-client,mariadb-server state=present
+
+    - name: Start and enable MariaDB
+      service: name=mariadb state=started enabled=true
+      
